@@ -1,0 +1,90 @@
+{
+  "project" : {
+    "id" : "ugadaj_chislo-711408-vma",
+    "name" : "ugadaj_chislo-711408-vma",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "tokenizerEngine" : "default"
+    },
+    "businessShared" : false,
+    "business" : false
+  },
+  "intents" : [ {
+    "id" : 445753,
+    "path" : "/Несогласие",
+    "answer" : "",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "нет"
+    }, {
+      "text" : "не хочу"
+    }, {
+      "text" : "отмена"
+    } ],
+    "patterns" : [ ]
+  }, {
+    "id" : 444926,
+    "path" : "/Давай поиграем",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "запусти угадай число"
+    }, {
+      "text" : "давай поиграем в угадай число"
+    }, {
+      "text" : "сыграть в угадай число"
+    }, {
+      "text" : "включи угадай число"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ ]
+  }, {
+    "id" : 453560,
+    "path" : "/Число",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "@duckling.number"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Number",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ ]
+    } ]
+  }, {
+    "id" : 444925,
+    "path" : "/Согласие",
+    "description" : "",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "да"
+    }, {
+      "text" : "хорошо"
+    }, {
+      "text" : "начнем"
+    } ],
+    "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Number",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ "Я загадал число, твои догадки?" ]
+    } ]
+  } ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+}
